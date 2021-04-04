@@ -1,0 +1,140 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #350048;
+	
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	font-family: 'Poppins', sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 100;
+	background: #bd00ff;
+}
+.logo {
+	color: rgb(226, 226, 226);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.nav-links {
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+}
+.nav-links li {
+	list-style: none;
+}
+.nav-links a {
+	color: rgb(226, 226, 226);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.nav-links a:hover {
+	color: #000000;
+}
+.burger {
+	display: none;
+}
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: rgb(226, 226, 226);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+/*responsive nav */
+
+@media screen and (max-width:1024px) {
+	.nav-links {
+		width: 60%;
+	}
+}
+@media screen and (max-width:750px) {
+	body {
+		overflow-x: hidden;
+		position: relative;
+	}
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 76vh;
+		top: 15vh;
+		background-color: #49BCFF;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+		z-index: 5;
+	}
+	.nav-links li {
+		opacity: 1;
+	}
+	.burger {
+		display: block;
+		cursor: pointer;
+	}
+}
+.nav-active {
+	transform: translateX(0%);
+}
+@keyframes navLinkFade {
+	from {
+		opacity: 1;
+		transform: translateX();
+	}
+	to {
+		opacity: 2;
+		transform: translateX(0px);
+	}
+}
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+	opacity: 0;
+}
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+.sectionone{
+	margin-top: 0;
+	padding: 0;
+	height: 100vh;
+}
+.sectionone h1 {
+	font-size: 30px;
+	margin: 60px;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+}
+
+.boxing{
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	margin: 0 30% 0 30%;
+	box-shadow: 1px 8px 16px 8px rgba(255, 249, 249, 0.911);
+
+}
+
+.box{
+	justify-content: center;
+	margin: 0 11% 34px 11%;
+	color: #fff;
+	
+}
